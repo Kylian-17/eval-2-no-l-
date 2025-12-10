@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Mountains of Christmas";
+}
+
+body {
+  background-color: #fdf6e3;
+  color: #333;
+  line-height: 1.5;
+  padding: 20px;
+  display: flex;
+  justify-content: center; /* centre la page horizontalement */
+}
+
+.page {
+  width: 800px; /* largeur de la feuille */
+  max-width: 95%;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.95); /* légère opacité */
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border: blue;
+  border-radius: 5px;
+}
+
+/* ---------- HEADER ---------- */
+header h1 {
+  text-align: center;
+  color: #c0392b;
+  margin-bottom: 20px;
+}
+
+/* ---------- SECTIONS ---------- */
+section {
+  margin-bottom: 30px;
+  padding: 15px;
+  background-color: #fff8f0;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------- COLONNES ---------- */
+.colonnes {
+  display: flex; /* colonnes côte à côte */
+  gap: 20px;
+}
+
+/* Colonnes gauche et droite */
+.gauche,
+.droite {
+  flex: 1;
+  padding: 10px;
+}
+
+/* On retire le fond de la colonne droite pour que chaque div soit séparé */
+section.droite {
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+}
+
+/* ---------- BLOC SEPARÉS DANS LA COLONNE DROITE ---------- */
+.droite > div {
+  background: #fff;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------- INPUTS ---------- */
+input[type="text"] {
+  border: none;
+  border-bottom: 2px solid #bda1a1; /* ligne sous l'input */
+  border-radius: 0;
+  padding: 5px 0;
+  font-size: 1em;
+  margin-left: 5px;
+  margin-right: 5px;
+  background: transparent;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-bottom-color: #c0392b; /* rouge Noël au focus */
+}
+
+/* ---------- LISTES ---------- */
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+/* ---------- IMAGES ALIGNÉES AU TEXTE ---------- */
+img.icon-texte {
+  height: 1em;
+  vertical-align: middle;
+}
+
+/* ---------- BOUTONS ---------- */
+button {
+  padding: 7px 15px;
+  background-color: #c0392b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e74c3c;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .colonnes {
+    flex-direction: column;
+  }
+}
